@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --cor-primaria: #f8f9fa;
+    --cor-secundaria: #ffffff;
+    --cor-terciaria: #727272;
+    --cor-quartenaria: #C9A227;
+    --cor-borda: #d2d2d2;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Inter';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url();
+}
+
+section {
+    padding: 49px;
+    background-color: var(--cor-secundaria);
+    width: 450px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+
+header img {
+    width: 100px; /* Aumenta o tamanho */
+    height: 100px; /* Garante que a altura e largura sejam iguais */
+    border: 2px solid var(--cor-borda); /* Deixa a borda mais visível */
+    border-radius: 50%; /* Mantém a forma redonda */
+    object-fit: cover; /* Garante que a imagem preencha sem distorcer */
+    
+    margin-bottom: 10px;
+}
+
+
+header h3 {
+    color: var(--cor-quartenaria);
+    font-size: 1.35rem;
+}
+
+header p {
+    color: var(--cor-terciaria);
+    font-weight: 500;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+}
+
+main a {
+    background-color: var(--cor-quartenaria);
+    padding: 15px 0;
+    text-decoration: none;
+    color: var(--cor-terciaria);
+    background-color: var(--cor-primaria);
+    border: 1px solid var(--cor-borda);
+    border-radius: 30px;
+    transition: all .5s ease-in-out;
+}
+
+main a:hover {
+    color: var(--cor-secundaria);
+    background-color: #71AE3F;
+}
+
+@media (max-width: 520px) {
+    section {
+        width: 90%;
+        padding: 30px;
+    }
+
+    header img {
+        width: 100px;
+    }
+
+    header h3 {
+        font-size: 1.3rem;
+    }
+
+    main {
+        gap: 15px;
+    }
+
+    main a {
+        padding: 10px 0;
+    }
+}
